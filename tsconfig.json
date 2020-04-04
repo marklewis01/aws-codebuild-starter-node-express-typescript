@@ -13,10 +13,13 @@
     "target": "es6",
     "moduleResolution": "node",
     "paths": {
+      "@middlewares": ["middleware"],
+      "@shared": ["shared"],
       "@server": ["server"]
     },
     "types": ["node"],
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts", "spec/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/public", "src/test/**"]
 }
