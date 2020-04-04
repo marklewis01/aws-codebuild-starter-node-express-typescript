@@ -1,7 +1,7 @@
 {
   "name": "aws-codebuild-starter-node-express-typescript",
   "version": "1.0.0",
-  "main": "src/",
+  "main": ".",
   "scripts": {
     "build": "node ./util/build.js",
     "lint": "tslint --project \"tsconfig.json\"",
