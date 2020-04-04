@@ -1,12 +1,11 @@
 {
   "name": "aws-codebuild-starter-node-express-typescript",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "main": "src/",
   "scripts": {
     "build": "node ./util/build.js",
     "lint": "tslint --project \"tsconfig.json\"",
-    "start": "cross-env ENV_FILE=production node -r ./env -r module-alias/register ./dist/start.js",
+    "start": "cross-env ENV_FILE=production node -r ./env -r module-alias/register ./dist/index.js",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
     "test": "mocha -r ts-node/register src/test**/*.ts"
   },
@@ -16,17 +15,16 @@
   },
   "author": "Mark Lewis",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/marklewis01/aws-codebuild-starter-node-express-typescript/issues"
-  },
-  "homepage": "https://github.com/marklewis01/aws-codebuild-starter-node-express-typescripts#readme",
   "_moduleAliases": {
-    "@server": "dist/index.js"
+    "@middlewares": "dist/middleware",
+    "@shared": "dist/shared",
+    "@server": "dist/server"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -46,7 +44,6 @@
     "ts-node": "^8.8.1",
     "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.1",
-    "typescript": "^3.8.3",
-    "winston": "^3.2.1"
+    "typescript": "^3.8.3"
   }
 }

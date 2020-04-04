@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+let dotenv = require("dotenv");
 
 // Set default to "development"
 const nodeEnv = process.env.ENV_FILE || "development";
