@@ -1,6 +1,5 @@
 {
   "extends": "tslint:recommended",
-  "jsRules": {},
   "rules": {
     "arrow-parens": ["as-needed"],
     "member-ordering": false,
