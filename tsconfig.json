@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "baseUrl": "./src",
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "target": "es6",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "commonjs",
     "outDir": "dist",
-    "baseUrl": ".",
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es6",
+    "moduleResolution": "node",
     "paths": {
-      "*": ["node_modules/*"]
-    }
+      "@server": ["server"]
+    },
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*.ts", "spec/**/*.ts"]
 }
