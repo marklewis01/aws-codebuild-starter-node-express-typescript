@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 // Express route handlers
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "I am on the line! v2" });
+  res.status(200).json({ message: "I am on the line!" });
 });
 
 app.post("/", (req, res) => {
