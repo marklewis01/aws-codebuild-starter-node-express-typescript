@@ -4,12 +4,23 @@ import app from "../app";
 
 const request = agent;
 
-describe("Some controller", () => {
+describe("Basic GET Request", () => {
   it(`Get request to / returns JSON with message key: "I am on the line!"`, async () => {
     const res = await request(app).get("/");
     const textResponse = res.body;
     expect(res.status).to.equal(200);
     expect(textResponse.message).to.be.a("string");
     expect(textResponse.message).to.equal("I am on the line!");
+  });
+});
+
+describe("Basic POST Request", () => {
+  it(`Post request to / returns JSON with message and data (post data)`, async () => {
+    const res = await request(app).post("/");
+    const textResponse = res.body;
+    expect(res.status).to.equal(200);
+    expect(textResponse.message).to.be.a("string");
+    expect(textResponse.message).to.equal("Posted successfully");
+    expect(textResponse.data).to.be.an("object");
   });
 });
