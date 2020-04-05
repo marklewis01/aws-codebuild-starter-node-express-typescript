@@ -8,7 +8,6 @@ phases:
     commands:
       - npm install -g typescript
       - npm install -g mocha
-      - npm install -g cross-env
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
