@@ -5,8 +5,6 @@ import fs from "fs";
 
 import BaseRouter from "./routes";
 
-const html = fs.readFileSync("./src/public/index.html");
-
 /**
  * Init Express
  */
@@ -25,9 +23,7 @@ app.use("/api", BaseRouter); // API Endpoint
  * Default root response
  */
 app.use("/", (req, res) => {
-  res.writeHead(200);
-  res.write(html);
-  res.end();
+  res.sendStatus(200);
 });
 
 /**

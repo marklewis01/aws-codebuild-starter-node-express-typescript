@@ -9,7 +9,7 @@ try {
   fs.copySync("./src/public", "./dist/public");
 
   // Transpile the typescript files
-  childProcess.exec("tsc");
+  childProcess.exec("tsc --build tsconfig.json");
 } catch (err) {
   console.log(err);
 }
