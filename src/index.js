@@ -1,6 +1,8 @@
+require("module-alias/register");
+
 import server from "./server";
 
-import { logger } from "./shared";
+import { logger } from "@shared";
 
 // Server
 const port = process.env.PORT || 3001;
