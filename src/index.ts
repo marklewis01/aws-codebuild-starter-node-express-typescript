@@ -1,5 +1,4 @@
-require("module-alias/register");
-
+import "module-alias/register";
 import server from "./server";
 
 import { logger } from "@shared";
