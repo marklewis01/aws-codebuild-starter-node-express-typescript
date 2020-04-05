@@ -1,4 +1,3 @@
-// import { logger } from "./shared";
 import server from "./server";
 
 // Server
