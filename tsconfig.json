@@ -12,11 +12,6 @@
     "strict": true,
     "target": "es6",
     "moduleResolution": "node",
-    "paths": {
-      "@middlewares": ["middleware"],
-      "@shared": ["shared"],
-      "@server": ["server"]
-    },
     "types": ["node", "chai", "mocha"],
     "typeRoots": ["node_modules/@types"]
   },

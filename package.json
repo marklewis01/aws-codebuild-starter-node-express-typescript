@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node ./util/build.js",
-    "lint": "tslint --project \"tsconfig.json\"",
-    "start": "cross-env ENV_FILE=production node -r ./env -r module-alias/register ./dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
     "test": "mocha -r ts-node/register src/test**/*.ts"
   },
@@ -15,11 +14,6 @@
   },
   "author": "Mark Lewis",
   "license": "ISC",
-  "_moduleAliases": {
-    "@middlewares": "dist/middleware",
-    "@shared": "dist/shared",
-    "@server": "dist/server"
-  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
