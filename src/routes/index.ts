@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   res
     .status(200)
-    .json({ message: "Posted successfully", data: req.body, version: 4 });
+    .json({ message: "Posted successfully", data: req.body, version: 1 });
 });
 
 /**
