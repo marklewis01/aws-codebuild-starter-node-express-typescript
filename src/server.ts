@@ -14,7 +14,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.status(200).json({ message: "Posted successfully", data: req.body });
+  res
+    .status(200)
+    .json({ message: "Posted successfully", data: req.body, version: 2 });
 });
 
 export default app;
