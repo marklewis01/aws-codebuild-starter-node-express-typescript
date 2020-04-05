@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node ./util/build.js",
     "lint": "tslint --project \"tsconfig.json\"",
     "start": "cross-env ENV_FILE=production node -r ./env -r module-alias/register ./dist/index.js",
     "start-dev": "nodemon --config \"./util/nodemon.json\"/",
@@ -22,10 +22,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
     "cors": "^2.8.5",
-    "cross-env": "^7.0.2",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "module-alias": "^2.2.2",
     "winston": "^3.2.1"
@@ -37,6 +34,9 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "fs-extra": "^9.0.0",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.2",
