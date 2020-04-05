@@ -2,10 +2,15 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 
+import BaseRouter from "./routes";
+
 // Initialization
 const app = express();
-app.use(cors());
+
+// Middlewares
+app.use(cors()); // for testing only - make more specific for production app
 app.use(bodyParser.json());
+app.use("/api", BaseRouter);
 
 // Express route handlers
 
