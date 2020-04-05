@@ -6,7 +6,7 @@ const request = agent;
 
 describe("Basic GET Request", () => {
   it(`Get request to / returns JSON with message key: "I am on the line!"`, async () => {
-    const res = await request(server).get("/");
+    const res = await request(server).get("/api");
     const textResponse = res.body;
     expect(res.status).to.equal(200);
     expect(textResponse.message).to.be.a("string");
@@ -16,7 +16,7 @@ describe("Basic GET Request", () => {
 
 describe("Basic POST Request", () => {
   it(`Post request to / returns JSON with message and data (post data)`, async () => {
-    const res = await request(server).post("/");
+    const res = await request(server).post("/api");
     const textResponse = res.body;
     expect(res.status).to.equal(200);
     expect(textResponse.message).to.be.a("string");
