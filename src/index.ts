@@ -1,5 +1,5 @@
-import server from "./server";
 import { logger } from "@shared";
+import server from "./server";
 
 // Server
 const port = process.env.PORT || 3001;

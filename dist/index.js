@@ -7,4 +7,3 @@ const port = process.env.PORT || 3001;
 server_1.default.listen(port, () => {
     _shared_1.logger.info(`Server running on port ${port}`);
 });
-//# sourceMappingURL=index.js.map

@@ -33,4 +33,3 @@ else {
     wintstonLogger.add(consoleTransport);
 }
 exports.logger = wintstonLogger;
-//# sourceMappingURL=logger.js.map
