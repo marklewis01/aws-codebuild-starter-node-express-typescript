@@ -1,6 +1,7 @@
 {
   "name": "aws-codebuild-starter-node-express-typescript",
   "version": "1.0.0",
+  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -14,6 +15,10 @@
   },
   "author": "Mark Lewis",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marklewis01/aws-codebuild-starter-node-express-typescript/issues"
+  },
+  "homepage": "https://github.com/marklewis01/aws-codebuild-starter-node-express-typescripts#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
